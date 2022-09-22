@@ -1,0 +1,654 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Dùng chung */
+    
+html {
+    font-family: Arial, Helvetica, sans-serif;/*set font chu cho ca website*/
+}
+#main{
+    
+}
+#header{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    z-index: 2;
+    box-shadow: inset;
+}
+#navbar{
+    position: relative;
+    height: 100%;
+    text-align: center;
+}
+#header.close {
+    display: none;
+}
+#navbar>li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 4.6;
+}
+#navbar a {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 22.8px;
+    color: #ccc;
+    
+}
+#navbar a:hover{
+    background-color: transparent;
+    color: #fff;
+    opacity: 0.8;
+}
+.close-navbar{
+    position: absolute;
+    color: #ccc;
+    z-index: 10;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    top:0;
+}
+.close-navbar:hover {
+    opacity: 0.5;
+    color: #fff;
+}
+.close-button {
+    position: absolute;
+    margin-left: 22px;
+    margin-top: 22px;
+}
+.open-button {
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    right: 0;
+    z-index: 1;
+    display: none;
+}
+.open-button.open-btn{
+    display: block;
+}
+.open-button i {
+    position: relative;
+    left: 18px;
+    top: 18px;
+    color: #ccc;
+    font-size: 25px;
+}
+
+#body {
+    
+}
+/*Home part*/
+.home-part{
+    position: relative;
+    width: 100%;
+    padding-top: 750px;
+    background: url('/assets/image/nen1.jpg') top center / cover no-repeat;
+    top:0;
+}
+/* --image css */
+.body-home-avatar img{
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    top: 235px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* --Text css*/
+.body-home-name{
+    position: absolute;
+    display: block;
+    top: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+}
+.full-name{
+    font-size: 25px;
+    font-weight: 600;
+}
+.school-name{
+    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+/* --end text css */
+/* --icon css */
+.body-home-icons{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 665px;
+    left: 50%;
+    transform: translateX(-50%);
+    color:#000;
+}
+.icons {
+    color:#fff;
+    text-decoration: underline;
+    padding: 12px;
+    opacity: 0.8;
+}
+.icons:hover {
+    opacity: 0.5;
+}
+/* End Home Part */
+.education-part {
+   display: flex;
+   flex-direction: row;
+}
+.edu-left{
+    
+    width: 50%;
+    height: 570px;
+    
+}
+.under-horizon{
+    display: inline-block;
+    margin-top: 11.5%;
+    margin-left: 6%;
+    font-size: 25px;
+    padding-right: 65%;
+    border-bottom: 1px #000 solid;
+}
+
+.edu-describe{
+    display: flex;
+}
+.edu-process{
+    width: 20%;
+    margin-left: 6%;
+    margin-right: 15px;
+    margin-top: 40px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-right: 1px #ccc solid;
+}
+.edu-time{
+    font-size: 15px;
+}
+.edu-degree{
+    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0.5;
+}
+.edu-desc-process{
+    width: 70.93%;
+    margin-top: 45px;
+}
+.university-name{
+    font-size: 15px;
+}
+.edu-comment{
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 13px;
+    opacity: 0.8;
+    font-weight: 300;
+    line-height: 20px;
+    padding-right: 60px;
+}
+.edu-right{
+    width: 50%;
+    height: 570px;
+    background-image: linear-gradient(#131516, #376795);
+    opacity: 0.9;
+}
+
+.wrapper-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.wrapper {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    color: #F0F0F0;
+    margin: 20px;
+    line-height: 120px;
+    text-align: center;
+    top: -40px;
+    
+}
+
+.arc-start{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    border-color: #fff #fff transparent transparent;
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+.arc-end {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+.arc-end-1{
+    border-color: #fff #fff transparent transparent;
+    transform: rotate(81deg);
+}
+.arc-end-2{
+    border-color: #fff #fff transparent transparent;
+    transform: rotate(45deg);
+}
+.arc-end-3{
+    border-color: #fff transparent transparent transparent;
+    transform: rotate(115deg);
+}
+/* End */
+.portfolio-part {
+    display: flex;
+    flex-direction: row;
+    
+}
+.portfolio-left{
+    width: 50% ;
+    height: 475px;
+    background-image: linear-gradient( #376795, rgb(110, 151, 205));
+    opacity: 0.9;
+}
+.portfolio-right{
+    width: 50% ;
+    height: 475px;
+    position: relative;
+}
+.mySlides img:hover {
+    opacity: 0.3;
+}
+.mySlides p {
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #1c252e;
+}
+.mySlides {
+    display: none;
+    height: 100%;
+    position: relative;
+}
+.mySlides img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    
+}
+.numbertext {
+    color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+}
+.next,
+.prev {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+}
+.next {
+    right: 0;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    text-align: center;
+}
+@keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
+.contact-part{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 550px;
+}
+.contact-left{
+    width: 50%;
+    height: 100%;
+}
+.contact-left iframe {
+    width: 100%;
+    height: inherit;
+}
+.contact-right {
+    width: 50%;
+    height: 100%; 
+    background-image: linear-gradient( rgb(110, 151, 205), rgb(208, 225, 247));
+}
+.contact-icons {
+    display: flex;
+    flex-wrap: wrap;
+    height: 40px;
+    margin-top: 30px;
+    width: 100%;
+    padding-left: 5%;
+}
+.text-icon{
+    font-size: 13px;
+    margin: 0 10px;
+}
+.text-icon i {
+    padding: 8px;
+    border-radius: 50%;
+    border: 1px #ccc solid;
+    margin-right: 4px;
+}
+.contact-input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 340px;
+    padding-left: 6.7%;
+}
+.contact-input form{
+    height: 340px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-content: center;
+    height: 50px;
+    width: 80%;
+   
+}
+.contact-name{
+    padding: 10px;
+    flex: 48%;
+    margin: 5px;
+    border: none;
+    outline: none;
+    background-color: #F0F0F0;
+}
+.contact-email{
+    padding: 10px;
+    margin: 5px;
+    flex: 48%;
+    border: none;
+    outline: none;
+    background-color: #F0F0F0;
+}
+.contact-massage{
+    height: 140px;
+    padding: 10px;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    background-color: #F0F0F0;
+    width: 78.65%;
+    margin-top: 20px;
+}
+.contact-send {
+    margin-left: 5px;
+    margin-top: 20px;
+    height: 40px;
+    color: white;
+    background-color: #000;
+    width: 150px;
+}
+.contact-send:hover{
+    opacity: 0.8;
+}
+#footer {
+    width: 100%;
+    height: 120px;
+    background-image: linear-gradient( rgb(208, 225, 247), rgb(234, 239, 247));
+}
+.footer-text{
+    display: inline-block;
+    color: #333;
+    margin-left: 40px;
+    margin-top: 50px;
+    font-size: 13px;
+}
+.footer-text p{
+    font-weight: lighter;
+}
+.footer-icons {
+    float: right;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.footer-icons i {
+    color: #333;
+}
+.return-check {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    right: 15px;
+    bottom: 20px;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: #333;
+}
+.return-check i {
+    position: relative;
+    left: 12px;
+    top: 12px;
+    color: #ccc;
+    font-size: 15px;
+}
+.return-check.turn-off{
+    display: none;
+}
+/* ----------------------------------------- */
+@media only screen and (max-width: 48.1875em) {
+    .under-horizon{
+        padding-right: 55%;
+        font-weight: 500;
+    }
+    .edu-describe{
+        flex-direction: column;
+        justify-content: start;
+    }
+    .edu-process{
+        position: relative;
+        width: 80%;
+        display: flex;
+        text-align: start;
+        border-right: none;
+        border-bottom: 1px #ccc solid;
+        padding-bottom: 10px;
+        margin-top: 0;
+    }
+
+    .edu-degree{
+        margin-top: 2px;
+        font-size: 13px;
+        opacity: 0.5;
+        margin-left: 10px;
+    }
+    .edu-desc-process{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .university-name {
+        padding: 10px;
+        padding-left: 20px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .edu-comment{
+        margin-top: 0;
+        text-align: justify;
+        font-size: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+        opacity: 0.8;
+        font-weight: 300;
+        line-height: 15px;
+    } 
+    .edu-describe.pe {
+        display: none;
+    }
+
+    .wrapper {
+        margin: 0px;
+    }
+    .portfolio-part {
+        height: 300px;
+    }
+    .portfolio-left {
+        height: 300px;
+    }
+    .portfolio-right {
+        height: 300px;
+    }
+    .contact-icons {
+        margin-top: 20px;
+    }
+    .text-icon {
+        padding: 15px;
+    }
+    .contact-input {
+        padding-left: 35px;
+        padding-top: 120px;
+    } 
+    .contact-massage {
+        margin-top: 27px;
+        width:76.5%;
+    }
+    .contact-send {
+        width: 80px;
+        height: 30px;
+        font-size: 11px;
+    }
+    .contact-input form {
+        height: 100%;
+    }
+}
+@media only screen and (min-width: 64em) and (max-width: 71.25em){
+    .contact-icons {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: 20px;  
+    }
+    .text-icon {
+        padding: 15px;
+    }
+    .contact-input {
+        padding-top: 120px;
+        padding-left: 50px;
+    }
+    .contact-massage {
+        margin-top: 25px;
+    }
+    .contact-input form {
+        height: 100%;
+    }
+}
+@media only screen and (min-width: 71.25em) and (max-width: 80.375em) {
+    .contact-input {
+        margin-top: 30px;
+    }
+    .contact-email {
+        margin-top: 10px;
+    }
+    .contact-massage {
+        margin-top: 40px;
+    }
+}
+@media only screen and (min-width: 48.1875em) and (max-width: 64em){
+    .under-horizon{
+        padding-right: 55%;
+        font-weight: 500;
+    }
+    .edu-describe{
+        flex-direction: column;
+        justify-content: start;
+    }
+    .edu-process{
+        position: relative;
+        width: 80%;
+        display: flex;
+        text-align: start;
+        border-right: none;
+        border-bottom: 1px #ccc solid;
+        padding-bottom: 10px;
+        margin-top: 0;
+    }
+
+    .edu-degree{
+        margin-top: 2px;
+        font-size: 13px;
+        opacity: 0.5;
+        margin-left: 10px;
+    }
+    .edu-desc-process{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .university-name {
+        padding: 10px;
+        padding-left: 20px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .edu-comment{
+        margin-top: 0;
+        text-align: justify;
+        font-size: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+        opacity: 0.8;
+        font-weight: 300;
+        line-height: 15px;
+    } 
+    .edu-describe.pe {
+        display: none;
+    }
+    .contact-icons {
+        margin-top: 20px;
+        display: block;
+    }
+    .text-icon {
+        padding: 15px;
+    }
+    .contact-input {
+        padding-left: 35px;
+        padding-top: 120px;
+    } 
+    .contact-massage {
+        margin-top: 27px;
+        width:76.5%;
+    }
+    .contact-send {
+        width: 80px;
+        height: 30px;
+        font-size: 11px;
+    }
+    .contact-input form {
+        height: 100%;
+    }
+}
